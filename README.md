@@ -1,2 +1,6 @@
 # IHC_SegundoProjeto
-Trabalho IHC
+Trabalho Interação Humano Computador
+
+Tempo de Leitura
+
+
