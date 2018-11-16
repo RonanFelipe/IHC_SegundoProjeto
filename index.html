@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>+QI :: Mais Que Informação</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="shortcut icon" href="logo.ico" type="image/x-icon"/>
+    <script src="js/myjs.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/mycss.css"/>
+</head>
+<body background="+QI.png">
+    <nav>
+        <div class="nav-wrapper green lighten-2">
+            <a href="index.html" class="brand-logo center" id="title">+QI :: Mais Que Informação</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="sobre.html" id="sobre">Sobre</a></li>
+            </ul>
+            <ul class="side-nav blue lighten-1" id="mobile-demo">
+                <li><a class="green lighten-2" href="sobre.html">Sobre</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row conteudoSexo" id="sexoChoice">
+        <div class="col s2"></div>
+        <div class="col s8">
+            <div class="card white darken-1">
+                <div class="card-content black-text">
+                    <span class="card-title centro">Qual o seu gênero?<br><br><br></span>
+                    <div class="form-bottom">
+                        <div role="form">
+                            <form action="#" id="genreChoice">
+                                <p class="center">
+                                    <input class="with-gap" name="sexo" type="radio" id="masculino" value="masculino" checked/>
+                                    <label for="masculino" class="white-text center"><img width="90" height="150"class="responsive-img" src="img/masc2.png" alt="Masculino"></label>
+                                    <input class="with-gap" name="sexo" type="radio" id="outro" value="outro"/>
+                                    <label for="outro" class="white-text center"><img width="90" height="150"class="responsive-img" src="img/agender3.png" alt="Outro"></label>
+                                    <input class="with-gap" name="sexo" type="radio" id="feminino" value="feminino"/>
+                                    <label for="feminino" class="white-text center"><img width="90" height="150"class="responsive-img" src="img/fem2.png" alt="Feminino"></label>
+                                </p>
+                            </form>
+                            <br><br>
+                            <div class="centro">
+                                <button onclick="getGenre()">Confirmar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s2"></div>
+    </div>
+
+    <div class="row conteudoLeitura" id="leituraTempo">
+        <div class="col s2"></div>
+        <div class="col s8">
+            <div class="card white darken-1">
+                <div class="card-content black-text">
+                    <span class="card-title centro">Por dia, quanto tempo você lê?<br><br><br></span>
+                    <div class="form-bottom">
+                        <div role="form">
+                            <form action="#">
+                                <p>
+                                    <input class="with-gap" type="radio" name="tempoLeitura" id="ate30" value="30" checked/>
+                                    <label for="ate30">Até 30 minutos por dia.</label>
+                                </p>
+                                <p>
+                                    <input class="with-gap" type="radio" name="tempoLeitura" id="entre3060" value="60"/>
+                                    <label  for="entre3060">Entre 30 e 60 minutos por dia.</label>
+                                </p>
+                                <p>
+                                    <input class="with-gap" type="radio" name="tempoLeitura" id="mais60" value="100"/>
+                                    <label for="mais60">Mais que 60 minutos por dia.</label>
+                                </p>
+                            </form>
+                            <br><br>
+                            <div class="centro">
+                                <button onclick="getTempoLeitura()">Confirmar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s2"></div>
+    </div>
+        <!-- Javascript -->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+</html>
