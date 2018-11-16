@@ -110,6 +110,59 @@
         </div>
         <div class="col s2"></div>
     </div>
+
+    <div class="row idade" id="idadeUsuario">
+        <div class="col s2"></div>
+        <div class="col s8">
+            <div class="card white darken-1">
+                <div class="card-content black-text">
+                    <span class="card-title centro">Qual a sua idade?<br><br><br></span>
+                    <div class="form-bottom">
+                        <div role="form">
+                            <form action="#">
+                                <p>
+                                    <input class="with-gap" type="radio" name="age" id="ate24" value="24" checked/>
+                                    <label for="ate24">Até 24 anos.</label>
+                                </p>
+                                <p>
+                                    <input class="with-gap" type="radio" name="age" id="de25a49" value="59"/>
+                                    <label  for="de25a49">De 25 a 59 anos.</label>
+                                </p>
+                                <p>
+                                    <input class="with-gap" type="radio" name="age" id="age60+" value="61"/>
+                                    <label for="age60+">Mais de 60 anos.</label>
+                                </p>
+                            </form>
+                            <br><br>
+                            <div class="centro">
+                                <button onclick="getAge()" class="waves-effect waves-light btn">Confirmar</button>
+                            </div>
+                            <!-- Modal -->
+                            <div id="myModalAge" class="modal">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <span class="close" id="closeModal">&times;</span>
+                                        <h2 class="centro">Curiosidade</h2>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p class="myText centro">
+                                            <br><br>
+                                            Estima-se que 44% da população brasileira não possui o
+                                            hábito da leitura e 30% nunca comprou um livro.
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <h3></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s2"></div>
+    </div>
         <!-- Javascript -->
     <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>

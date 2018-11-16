@@ -10,6 +10,10 @@
     display: none;
 }
 
+#idadeUsuario {
+    display: none;
+}
+
 /*Modal (background)*/
 .modal {
     display: none;
