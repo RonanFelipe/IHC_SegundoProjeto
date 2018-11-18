@@ -1,7 +1,8 @@
 let user = {
     sexo: "null",
     idade: "null",
-    tempoLeituraDiaria: "null"
+    tempoLeituraDiaria: "null",
+    utilizaOculos: "null"
 };
 
 function getGenre(){
@@ -55,11 +56,15 @@ function getAge() {
 
             span.onclick = function () {
                 modal.style.display = "none";
+                document.getElementById('idadeUsuario').style.display = "none";
+                document.getElementById('oculos').style.display = "block";
             };
 
             window.onclick = function (event) {
                 if (event.target == modal) {
                     modal.style.display = "none";
+                    document.getElementById('idadeUsuario').style.display = "none";
+                    document.getElementById('oculos').style.display = "block";
                 }
             };
         } else if (radios[1].checked) {
@@ -72,11 +77,15 @@ function getAge() {
 
             span.onclick = function () {
                 modal.style.display = "none";
+                document.getElementById('idadeUsuario').style.display = "none";
+                document.getElementById('oculos').style.display = "block";
             };
 
             window.onclick = function (event) {
                 if (event.target == modal) {
                     modal.style.display = "none";
+                    document.getElementById('idadeUsuario').style.display = "none";
+                    document.getElementById('oculos').style.display = "block";
                 }
             };
         } else if (radios[2].checked) {
@@ -89,13 +98,26 @@ function getAge() {
 
             span.onclick = function () {
                 modal.style.display = "none";
+                document.getElementById('idadeUsuario').style.display = "none";
+                document.getElementById('oculos').style.display = "block";
             };
 
             window.onclick = function (event) {
                 if (event.target == modal) {
                     modal.style.display = "none";
+                    document.getElementById('idadeUsuario').style.display = "none";
+                    document.getElementById('oculos').style.display = "block";
                 }
             };
+        }
+    }
+}
+
+function getGlassesInfo() {
+    let radios = document.getElementsByName('oculosLeitura');
+    for (let i = 0, length = radios.length; i < length; i++) {
+        if (radios[i].checked) {
+            user.utilizaOculos = radios[i].value();
         }
     }
 }
