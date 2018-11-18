@@ -117,7 +117,20 @@ function getGlassesInfo() {
     let radios = document.getElementsByName('oculosLeitura');
     for (let i = 0, length = radios.length; i < length; i++) {
         if (radios[i].checked) {
-            user.utilizaOculos = radios[i].value();
+            user.utilizaOculos = radios[i].value;
+            let modal = document.getElementById('myModalGlasses');
+            let span = document.getElementById('closeModalOculos');
+            modal.style.display = "block";
+
+            span.onclick = function () {
+                modal.style.display = "none";
+            };
+
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
         }
     }
 }
