@@ -76,25 +76,38 @@
         <div class="col s8">
             <div class="card white darken-1">
                 <div class="card-content black-text">
-                    <span class="card-title centro">Por dia, quanto tempo você lê?<br><br><br></span>
+                    <span class="card-title centro" id="card02">Por dia, quanto tempo você lê?<br><br><br></span>
                     <div class="form-bottom">
                         <div role="form">
                             <form action="#">
-                                <p>
+                                <p class="card2">
                                     <input class="with-gap" type="radio" name="tempoLeitura" id="ate30" value="30" checked/>
                                     <label for="ate30">Até 30 minutos por dia.</label>
                                 </p>
-                                <p>
+                                <p class="card2">
                                     <input class="with-gap" type="radio" name="tempoLeitura" id="entre3060" value="60"/>
                                     <label  for="entre3060">Entre 30 e 60 minutos por dia.</label>
                                 </p>
-                                <p>
+                                <p class="card2">
                                     <input class="with-gap" type="radio" name="tempoLeitura" id="mais60" value="100"/>
                                     <label for="mais60">Mais que 60 minutos por dia.</label>
                                 </p>
+                                <div class="centro">
+                                    <div class="preloader-wrapper big active" id="loading2">
+                                        <div class="spinner-layer spinner-green-only">
+                                            <div class="circle-clipper left">
+                                                <div class="circle"></div>
+                                            </div><div class="gap-patch">
+                                            <div class="circle"></div>
+                                        </div><div class="circle-clipper right">
+                                            <div class="circle"></div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </form>
                             <br><br>
-                            <div class="centro">
+                            <div class="centro" id="card200">
                                 <button onclick="getTempoLeitura()" class="waves-effect waves-light btn">Confirmar</button>
                             </div>
                             <!-- Modal -->

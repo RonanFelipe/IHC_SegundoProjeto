@@ -27,8 +27,22 @@ function getGenre(){
             setTimeout(animation, 0);
         }
     }
+}
 
+function animation2() {
+    let elemento = document.getElementsByClassName('card2');
+    for (let i = 0, length = elemento.length; i < length; i++) {
+        elemento[i].style.display = "none";
+    }
+    document.getElementById('card02').innerHTML = "";
+    document.getElementById('card200').innerHTML = "";
+    document.getElementById('loading2').style.display = "block";
+    setTimeout(nextCard2, 500);
+}
 
+function nextCard2() {
+    document.getElementById('leituraTempo').style.display = "none";
+    document.getElementById('idadeUsuario').style.display = "block";
 }
 
 function getTempoLeitura() {
@@ -42,15 +56,13 @@ function getTempoLeitura() {
 
             span.onclick = function () {
                 modal.style.display = "none";
-                document.getElementById('leituraTempo').style.display = "none";
-                document.getElementById('idadeUsuario').style.display = "block";
+                animation2();
             };
 
             window.onclick = function (event) {
                 if (event.target == modal) {
                     modal.style.display = "none";
-                    document.getElementById('leituraTempo').style.display = "none";
-                    document.getElementById('idadeUsuario').style.display = "block";
+                    animation2();
                 }
             }
         }
