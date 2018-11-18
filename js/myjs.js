@@ -6,15 +6,28 @@ let user = {
     dispositivosLeitura: []
 };
 
+function animation() {
+    document.getElementById('card1').style.display = "none";
+    document.getElementById('card01').innerHTML = "";
+    document.getElementById('card010').innerHTML = "";
+    document.getElementById('loading').style.display = "block";
+    setTimeout(nextCard, 400);
+}
+
+function nextCard() {
+    document.getElementById('sexoChoice').style.display = "none";
+    document.getElementById('leituraTempo').style.display = "block";
+}
+
 function getGenre(){
     let radios = document.getElementsByName('sexo');
     for (let i = 0, length = radios.length; i < length; i++) {
         if (radios[i].checked){
             user.sexo = radios[i].value;
+            setTimeout(animation, 0);
         }
     }
-    document.getElementById('sexoChoice').style.display = "none";
-    document.getElementById('leituraTempo').style.display = "block";
+
 
 }
 
