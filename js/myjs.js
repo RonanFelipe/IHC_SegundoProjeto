@@ -2,7 +2,8 @@ let user = {
     sexo: "null",
     idade: "null",
     tempoLeituraDiaria: "null",
-    utilizaOculos: "null"
+    utilizaOculos: "null",
+    dispositivosLeitura: []
 };
 
 function getGenre(){
@@ -124,11 +125,15 @@ function getGlassesInfo() {
 
             span.onclick = function () {
                 modal.style.display = "none";
+                document.getElementById('oculos').style.display = "none";
+                document.getElementById('dispositivosLeitura').style.display = "block";
             };
 
             window.onclick = function (event) {
                 if (event.target == modal) {
                     modal.style.display = "none";
+                    document.getElementById('oculos').style.display = "none";
+                    document.getElementById('dispositivosLeitura').style.display = "block";
                 }
             }
         }
@@ -136,5 +141,24 @@ function getGlassesInfo() {
 }
 
 function getDispositivoInfo() {
+    let dispositivos = document.getElementsByName('meioLeitura');
+    for (let i = 0, length = dispositivos.length; i < length; i++) {
+        if (dispositivos[i].checked) {
+            user.dispositivosLeitura.push(dispositivos[i].value)
+        }
+    }
 
+    let modal = document.getElementById('myModalDispositivos');
+    let span = document.getElementById('closeModalDispositivos');
+    modal.style.display = "block";
+
+    span.onclick = function () {
+        modal.style.display = "none";
+    };
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
 }
