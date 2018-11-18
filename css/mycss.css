@@ -14,6 +14,10 @@
     display: none;
 }
 
+#dispositivosLeitura {
+    display: none;
+}
+
 #oculos {
     display: none;
 }

@@ -211,6 +211,71 @@
         </div>
         <div class="col s2"></div>
     </div>
+
+    <div class="row dispositivos" id="dispositivosLeitura">
+        <div class="col s2"></div>
+        <div class="col s8">
+            <div class="card white darken-1">
+                <div class="card-content black-text">
+                    <span class="card-title centro">Quais os meios você utiliza para ler?<br><br><br></span>
+                    <div class="form-bottom">
+                        <div role="form">
+                            <form action="#">
+                                <p class="card-title">
+                                    <input class="with-gap" type="checkbox" name="meioLeitura" id="ereader" value="Ebook"/>
+                                    <label for="ereader">
+                                        <img width="90" height="150"class="responsive-img" src="img/ebook.png" alt="Ebook" align="center">
+                                        <b>E-reader (Ex. Kindle, Lev, Kobo)*</b>
+                                    </label>
+                                </p>
+                                <p class="card-title">
+                                    <input class="with-gap" type="checkbox" name="meioLeitura" id="eletronico" value="Eletronico"/>
+                                    <label  for="eletronico">
+                                        <img width="90" height="150"class="responsive-img" src="img/eletronico.png" alt="Eletronico" align="center">
+                                        <b>Tablet, Celular ou Computador</b>
+                                    </label>
+                                </p>
+                                <p class="card-title">
+                                    <input class="with-gap" type="checkbox" name="meioLeitura" id="livro" value="Livros"/>
+                                    <label  for="livro">
+                                        <img width="90" height="150"class="responsive-img" src="img/livros.png" alt="Livros" align="center">
+                                        <b>Livro</b>
+                                    </label>
+                                </p>
+                                <br>
+                                <p>*E-reader é um dispositivo de leitura de livros digitais.</p>
+                            </form>
+                            <br><br>
+                            <div class="centro">
+                                <button onclick="getDispositivoInfo()" class="waves-effect waves-light btn">Confirmar</button>
+                            </div>
+                            <!-- Modal -->
+                            <div id="myModalDispositivos" class="modal">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <span class="close" id="closeModalDispositivos">&times;</span>
+                                        <h2 class="centro" id="tituloDispositivos">Dica!</h2>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p class="myText centro" id="textoModalDispositivos">
+                                            <br><br>
+                                            Evite ler em locais escuros. Para uma leitura confortável
+                                            utilize uma fonte de luz natural ou artificial para não
+                                            prejudicar a visão.
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <h3></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s2"></div>
+    </div>
         <!-- Javascript -->
     <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>

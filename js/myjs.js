@@ -135,4 +135,6 @@ function getGlassesInfo() {
     }
 }
 
+function getDispositivoInfo() {
 
+}
